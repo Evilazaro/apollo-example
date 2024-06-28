@@ -1,6 +1,24 @@
-# bin/bash
+#!/bin/bash
 
-# bash script to install dependencies for the project
+# Bash script to install project dependencies
+
+# Install the latest version of the 'debug' package to address potential errors
+echo "Installing the latest version of 'debug' package..."
+sudo apt-get update
+sudo apt-get install -y jq
+
+npm install debug@latest
+
+# Install required Azure and Apollo packages
+echo "Installing Azure and Apollo dependencies..."
 npm install @as-integrations/azure-functions @apollo/server graphql @azure/functions azure-functions-core-tools@4
-npm install @azure/msal-node 
-npm install dotenv
+
+# Install MSAL and dotenv packages for authentication and environment variable management
+echo "Installing 'msal-node' and 'dotenv' packages..."
+npm install @azure/msal-node dotenv
+
+# Install any remaining dependencies from package.json
+echo "Installing remaining dependencies from package.json..."
+npm install
+
+echo "All dependencies installed successfully."

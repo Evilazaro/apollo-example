@@ -17,6 +17,7 @@
     "@azure/msal-node": "^2.9.2",
     "@graphql-tools/merge": "^9.0.4",
     "azure-functions-core-tools": "^4.0.5907",
+    "debug": "^4.3.5",
     "dotenv": "^16.4.5",
     "graphql": "^16.9.0"
   },
