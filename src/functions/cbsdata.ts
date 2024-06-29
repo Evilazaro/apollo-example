@@ -1,5 +1,6 @@
 import { app, HttpHandler, HttpRequest, HttpResponseInit, InvocationContext } from "@azure/functions";
 import { ConfidentialClientApplication, Configuration, AuthorizationCodeRequest } from "@azure/msal-node";
+import { DefaultAzureCredential } from "@azure/identity";
 import dotenv from 'dotenv';
 
 // Load environment variables from .env file
@@ -62,7 +63,7 @@ export async function cbsdata(request: HttpRequest, context: InvocationContext):
             status: 200,
             body: "Claims Received",
             headers: {
-                "Content-Type": "text/plain"
+                "Content-Type": "application/json"
             },
             jsonBody: {
                 claims: claims

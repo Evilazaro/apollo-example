@@ -17,6 +17,14 @@ npm install @as-integrations/azure-functions @apollo/server graphql @azure/funct
 echo "Installing 'msal-node' and 'dotenv' packages..."
 npm install @azure/msal-node dotenv
 
+# Install the 'axios' and jwt-decode packages
+echo "Installing 'axios' and 'jwt-decode' packages..."
+npm install axios jwt-decode
+
+# Install Azure Identity 
+echo "Installing Azure Identity..."
+npm install @azure/identity
+
 # Install any remaining dependencies from package.json
 echo "Installing remaining dependencies from package.json..."
 npm install
