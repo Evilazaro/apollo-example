@@ -14,8 +14,15 @@
     "@apollo/server": "^4.10.4",
     "@as-integrations/azure-functions": "^0.2.0",
     "@azure/functions": "^4.5.0",
+    "@azure/identity": "^4.3.0",
+    "@azure/msal-node": "^2.9.2",
     "@graphql-tools/merge": "^9.0.4",
-    "graphql": "^16.8.2"
+    "axios": "^1.7.2",
+    "azure-functions-core-tools": "^4.0.5907",
+    "debug": "^4.3.5",
+    "dotenv": "^16.4.5",
+    "graphql": "^16.9.0",
+    "jwt-decode": "^4.0.0"
   },
   "devDependencies": {
     "@types/node": "^18.x",
