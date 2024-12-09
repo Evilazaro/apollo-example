@@ -44,7 +44,7 @@ export async function getAuthenticationAuthorizationToken(request: HttpRequest, 
                 },
             },
         };
-    } catch (error) {
+    } catch (error : any) {
         return {
             status: 500,
             body: `Error retrieving token: ${error.message} ClientId: ${CLIENT_ID} TenantId: ${TENANT_ID} ClientSecret: ${CLIENT_SECRET}`,

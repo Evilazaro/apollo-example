@@ -6,13 +6,14 @@ import { clientTypeDefs } from '../schemas/clientSchema'
 import { productCatalogTypeDefs } from '../schemas/productCatalogSchema';
 import { clientResolvers } from '../resolvers/clientResolvers';
 import { productCatalogResolvers } from '../resolvers/productCatalogResolvers'; // Update the file path here
+import { BaseContext } from "@apollo/server";
 
 // Merge schemas and resolvers
 const typeDefs = mergeTypeDefs([clientTypeDefs, productCatalogTypeDefs]);
 const resolvers = mergeResolvers([clientResolvers, productCatalogResolvers]);
 
 // Set up Apollo Server
-const server = new ApolloServer({
+const server = new ApolloServer<BaseContext>({
   typeDefs,
   resolvers,
 });
